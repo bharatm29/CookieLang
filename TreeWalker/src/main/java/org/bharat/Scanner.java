@@ -102,7 +102,7 @@ public class Scanner {
                     identifier();
                 }
                 else{
-                    Lox.error(line, "Unexpected character.");
+                    CookieLang.error(line, "Unexpected character.");
                 }
             }
         }
@@ -141,7 +141,7 @@ public class Scanner {
         }
 
         if (isAtEnd()) {
-            Lox.error(line, "Unterminated string.");
+            CookieLang.error(line, "Unterminated string.");
             return;
         }
 
