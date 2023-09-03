@@ -1,4 +1,4 @@
-package org.bharat;
+package org.bharat.CookieLang;
 
 public class Token {
     final TokenType type;

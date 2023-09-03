@@ -1,4 +1,4 @@
-package org.bharat;
+package org.bharat.CookieLang;
 
 import java.io.BufferedReader;
 import java.io.IOException;

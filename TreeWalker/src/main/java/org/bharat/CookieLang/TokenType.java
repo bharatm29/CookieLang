@@ -1,4 +1,4 @@
-package org.bharat;
+package org.bharat.CookieLang;
 
 public enum TokenType {
     // Single-character tokens.
