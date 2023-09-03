@@ -102,7 +102,7 @@ public class Scanner {
                     identifier();
                 }
                 else{
-                    CookieLang.error(line, "Unexpected character.");
+                    CookieLang.error(new Token(null, null, null, line), "Unexpected character.");
                 }
             }
         }
@@ -141,7 +141,7 @@ public class Scanner {
         }
 
         if (isAtEnd()) {
-            CookieLang.error(line, "Unterminated string.");
+            CookieLang.error(new Token(null, null, null, line), "Unterminated string.");
             return;
         }
 
