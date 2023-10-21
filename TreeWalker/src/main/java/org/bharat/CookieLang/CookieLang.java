@@ -13,7 +13,7 @@ public class CookieLang {
 
     public static void main(String[] args) throws IOException {
         if (args.length > 1) {
-            System.out.println("Usage: jlox [script]");
+            System.out.println("Usage: jCookieLang [script]");
             System.exit(64);
         } else if (args.length == 1) {
             runFile(args[0]);
@@ -46,14 +46,15 @@ public class CookieLang {
     private static void run(String source){
         Scanner scanner = new Scanner(source);
         List<Token> tokens = scanner.scanTokens();
+        tokens.forEach(System.out::println);
 
-        Parser parser = new Parser(tokens);
-        Expr expression = parser.parse();
-
-        // Stop if there was a syntax error.
-        if (hadError) return;
-
-        System.out.println(new AstPrinter().print(expression));
+//        Parser parser = new Parser(tokens);
+//        Expr expression = parser.parse();
+//
+//        // Stop if there was a syntax error.
+//        if (hadError) return;
+//
+//        System.out.println(new AstPrinter().print(expression));
     }
 
     static void error(Token token, String message) {
